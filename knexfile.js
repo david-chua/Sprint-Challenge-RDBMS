@@ -8,7 +8,7 @@ module.exports = {
       filename: './data/project_tracker.db3'
     },
     useNullAsDefault: true,
-    migratiosn: {
+    migrations: {
       directory: './data/migrations'
     },
     seeds: {
