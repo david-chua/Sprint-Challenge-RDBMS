@@ -37,7 +37,7 @@ server.get('/:id', (req,res) => {
         return actionItem
       })
       const projectValues = {
-        id: project[0].projects_id,
+        id: id,
         name: project[0].project_name,
         description: project[0].project_description,
         completed: project[0].completed === 0? false: true,

@@ -9,7 +9,7 @@ module.exports ={
   getById: (id) => {
     let query = db('projects')
     return query
-      .innerJoin('actions', 'actions.projects_id', 'projects.id')
+      .leftJoin('actions', 'actions.projects_id', 'projects.id')
       .where('projects.id', id)
   },
 
