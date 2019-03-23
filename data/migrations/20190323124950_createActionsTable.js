@@ -7,7 +7,6 @@ exports.up = function(knex, Promise) {
     tbl.boolean('completed')
     tbl
       .integer('projects_id')
-      .unique()
       .unsigned()
       .references('id')
       .inTable('projects')
