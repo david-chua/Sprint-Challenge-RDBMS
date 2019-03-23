@@ -5,6 +5,7 @@ module.exports ={
   get: () => {
     return db('actions');
   },
+  
   insert: function(newAction) {
     return db('actions')
       .insert(newAction)

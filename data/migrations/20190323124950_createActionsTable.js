@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     tbl.string('actions_description')
       .notNullable()
     tbl.text('notes')
-    tbl.boolean('completed')
+    tbl.boolean('actions_completed')
     tbl
       .integer('projects_id')
       .unsigned()
