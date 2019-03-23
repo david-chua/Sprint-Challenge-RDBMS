@@ -68,4 +68,19 @@ server.post('/', (req,res) => {
     });
 });
 
+server.delete('/:id', (req,res) => {
+  const {id} = req.params;
+  projects
+    .remove(id)
+    .then(response => {
+      if (response === 0){
+        return errorHelper(404, 'No Projects found with that id', res);
+      }
+      res.json(response)
+    })
+    .catch(err => {
+      return errorHelper(500, 'Internal Server Error', res);
+    })
+})
+
 module.exports = server;

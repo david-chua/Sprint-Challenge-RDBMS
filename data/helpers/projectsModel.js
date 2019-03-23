@@ -17,5 +17,11 @@ module.exports ={
     return db('projects')
       .insert(newProject)
       .then(() => db('projects'));
+  },
+
+  remove: function(id) {
+    return db('projects')
+      .where('id', id)
+      .del();
   }
 }
