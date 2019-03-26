@@ -22,7 +22,7 @@ server.post('/', (req,res) => {
   const newAction = {
     actions_description: req.body.actions_description,
     notes: req.body.notes,
-    completed: req.body.completed,
+    actions_completed: req.body.completed,
     projects_id: req.body.projects_id
   }
 
